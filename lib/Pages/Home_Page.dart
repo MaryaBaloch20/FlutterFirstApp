@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
+        // ignore: avoid_unnecessary_containers
         child: Container(
           child: const Text(
             "Hey this is my app no $no",
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
