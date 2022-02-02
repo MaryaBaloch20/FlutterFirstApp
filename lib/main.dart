@@ -1,5 +1,5 @@
-import 'package:firt_app/Pages/Home_Page.dart';
-import 'package:firt_app/Pages/Login_Page.dart';
+import 'package:firt_app/Pages/home_page.dart';
+import 'package:firt_app/Pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
