@@ -10,9 +10,9 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 5.0),
+              padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 10.0),
               child: Image.asset(
-                "assets/images/login_image.png",
+                "assets/images/login_image3.jpg",
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,8 +28,8 @@ class LoginPage extends StatelessWidget {
             //   height: 20.0,
             // ),
             Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 50.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 3.0, horizontal: 50.0),
                 child: Column(children: [
                   TextFormField(
                     decoration: const InputDecoration(
@@ -45,6 +45,9 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ])),
+            const SizedBox(
+              height: 0.0,
+            ),
             ElevatedButton(
               onPressed: () {},
               child: const Text(
@@ -52,10 +55,8 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
-                  primary: Colors.indigo[500],
-                  textStyle: const TextStyle(
-                    fontSize: 20.0,
-                  )),
+                primary: Colors.indigo[500],
+              ),
             )
           ],
         ));
