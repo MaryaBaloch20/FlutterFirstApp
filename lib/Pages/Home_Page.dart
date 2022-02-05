@@ -5,17 +5,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const int no = 2;
+    // const int no = 2;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Marya's App"),
+        title: const Text("Home Page"),
         centerTitle: true,
       ),
       body: Center(
         // ignore: avoid_unnecessary_containers
         child: Container(
           child: const Text(
-            "Hey this is my app no $no",
+            "This is the HomePage",
             style: TextStyle(
               fontSize: 20.0,
             ),
