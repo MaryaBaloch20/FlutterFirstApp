@@ -19,13 +19,14 @@ class MyApp extends StatelessWidget {
       //home: const HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue[900],
         fontFamily: GoogleFonts.aBeeZee().fontFamily,
       ),
       darkTheme: ThemeData(
         //brightness: Brightness.dark,
         primarySwatch: Colors.lightGreen,
       ),
+      initialRoute: MyRoutes.homeRoute,
 
       routes: {
         "/": (context) => const LoginPage(),
