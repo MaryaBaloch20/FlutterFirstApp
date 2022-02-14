@@ -16,13 +16,14 @@ class MyTheme {
           )
           // textTheme: TextTheme(  : TextStyle(color: Colors.black))
           ),
-          
-          );
+      drawerTheme: DrawerThemeData(backgroundColor: Colors.blue[900]));
 
-  static ThemeData darkTheme(BuildContext(context)) =>
-  ThemeData(
-        //brightness: Brightness.dark,
-        // primarySwatch: Colors.lightGreen,
-        brightness: Brightness.dark,
-      ),
+  static ThemeData darkTheme(BuildContext(context)) => ThemeData(
+      //brightness: Brightness.dark,
+      // primarySwatch: Colors.lightGreen,
+      brightness: Brightness.dark,
+      appBarTheme:
+          AppBarTheme(backgroundColor: Colors.grey[850], elevation: 0.0),
+      drawerTheme: DrawerThemeData(backgroundColor: Colors.grey[900]));
+  // drawerTheme: const DrawerThemeData(backgroundColor: Colors.black54));
 }

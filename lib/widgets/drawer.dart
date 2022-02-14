@@ -8,7 +8,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     const accountImage = "assets/images/AyezaKhan.png";
     return Drawer(
-      backgroundColor: Colors.blue[900],
+      // backgroundColor: Colors.blue[900],
       child: ListView(
         //padding: const EdgeInsets.all(0.0),
         children: const [
@@ -16,8 +16,12 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.all(0.0),
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.all(0.0),
-                accountName: Text("Marya Baloch"),
-                accountEmail: Text("Maryabaloch7@gmail.com"),
+                accountName: Text(
+                  "Marya Baloch",
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                accountEmail: Text("Maryabaloch7@gmail.com",
+                    style: TextStyle(fontSize: 17.0)),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: AssetImage(accountImage),
                 ),
