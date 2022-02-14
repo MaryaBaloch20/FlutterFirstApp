@@ -30,9 +30,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Home",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
           ListTile(
@@ -42,9 +43,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Profile",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
           ListTile(
@@ -54,9 +56,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Email",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           )
         ],
