@@ -24,6 +24,8 @@ class MyTheme {
       brightness: Brightness.dark,
       appBarTheme:
           AppBarTheme(backgroundColor: Colors.grey[850], elevation: 0.0),
-      drawerTheme: DrawerThemeData(backgroundColor: Colors.grey[900]));
+      drawerTheme: DrawerThemeData(backgroundColor: Colors.grey[900]),
+            
+      );
   // drawerTheme: const DrawerThemeData(backgroundColor: Colors.black54));
 }

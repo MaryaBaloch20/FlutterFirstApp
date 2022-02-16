@@ -16,12 +16,11 @@ class _LoginPageState extends State<LoginPage> {
     if (_formkey.currentState!.validate()) {
       setState(() {
         changeButton = true;
-      }
-    );
-    await Future.delayed(const Duration(seconds: 1));
-    await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      });
+      await Future.delayed(const Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.homeRoute);
     }
-   
+
     setState(() {
       changeButton = false;
     });
@@ -37,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 10.0),
+                  padding: const EdgeInsets.fromLTRB(30.0, 80.0, 30.0, 10.0),
                   child: Image.asset(
                     "assets/images/login_image3.jpg",
                     fit: BoxFit.cover,
@@ -63,6 +62,9 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: const InputDecoration(
                           hintText: "Enter Username",
                           labelText: "Username",
+                          labelStyle: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w500),
+                          // hintStyle: TextStyle(color: Colors.black),
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -80,8 +82,11 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: const InputDecoration(
                           hintText: "Enter Password",
                           labelText: "Password",
+                          labelStyle: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w500),
+                          // hintStyle: TextStyle(color: Colors.black),
                         ),
-                        validator: ( value) {
+                        validator: (value) {
                           if (value!.isEmpty) {
                             return "Password can not be empty";
                           } else if (value.length < 5) {
