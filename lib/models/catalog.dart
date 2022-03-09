@@ -13,16 +13,35 @@ class Item {
       required this.price,
       required this.imageUrl,
       required this.color});
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+        id: map["id"],
+        name: map["name"],
+        desc: map["desc"],
+        price: map["price"],
+        imageUrl: map["image"],
+        color: map["color"]);
+  }
+  toMap() => {
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "image": imageUrl,
+        "color": color
+      };
 }
 
 class CatalogModel {
-  static final items = [
+  static List<Item> items = [
     Item(
         id: 1,
-        name: "Iphone 13",
-        desc: "Apple iphone 13 Latest",
+        name: "Iphone 12",
+        desc: "Apple iphone 12 Latest",
         price: 1200,
-        imageUrl: "https://asset.conrad.com/media10/isa/160267/c1/-/en/002471203PI00/image.jpg",
+        imageUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc",
         color: "Light Blue")
   ];
 }
