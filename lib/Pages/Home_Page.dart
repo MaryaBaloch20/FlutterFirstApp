@@ -6,6 +6,7 @@ import 'package:firt_app/widgets/drawer.dart';
 import 'package:firt_app/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
