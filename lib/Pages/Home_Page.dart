@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:firt_app/models/catalog.dart';
 import 'package:firt_app/widgets/drawer.dart';
 import 'package:firt_app/widgets/item_widget.dart';
+import 'package:firt_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -34,56 +35,64 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // final dummyList = List.generate(
-    //   30,
-    //   (index) => CatalogModel.items[0],
-    // );
-    // const int no = 2;
     return Scaffold(
-      appBar: AppBar(
-        //backgroundColor: Colors.blue[900],
-        title: const Text("Catalog App"),
-        centerTitle: true,
-      ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 16,
-          crossAxisSpacing: 16,
+      backgroundColor: MyTheme.creamColor,
+      body: SafeArea(
+          child: Container(
+        padding: Vx.m32,
+        child: Column(
+          children: const [
+            CatalogHeader(),
+            CatalogList(),
+          ],
         ),
-        itemBuilder: (context, index) {
-          final item = CatalogModel.items[index];
-          return Card(
-              clipBehavior: Clip.antiAlias,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: GridTile(
-                header: Container(
-                  child: Text(item.name,
-                      style: const TextStyle(
-                        color: Colors.white,
-                      )),
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.blue[900],
-                  ),
-                ),
-                child: Image.network(item.imageUrl),
-                footer: Text(item.price.toString()),
-              ));
-        },
-        itemCount: CatalogModel.items.length,
-      ),
-      //Can be done with list view Like this:
-      // ListView.builder(
-      //   itemCount: CatalogModel.items.length,
-      //   itemBuilder: (context, index) =>
-      //      ItemWidget(
-      //       item: CatalogModel.items[index],
-      //     )
-
-      // ),
-      drawer: const MyDrawer(),
+      )),
     );
+  }
+}
+
+class CatalogHeader extends StatelessWidget {
+  const CatalogHeader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        "Catalog Application".text.xl5.bold.color(MyTheme.blueColor).make(),
+        "Trending products".text.xl2.make(),
+      ],
+    );
+  }
+}
+
+class CatalogList extends StatelessWidget {
+  const CatalogList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        itemCount: CatalogModel.items.length,
+        itemBuilder: (context, index) {
+          final catalog = CatalogModel.items[index];
+          return CatalogItem(catalog: catalog);
+        });
+  }
+}
+
+class CatalogItem extends StatelessWidget {
+  final Item catalog;
+  const CatalogItem({Key? key, required this.catalog})
+      : assert(catalog != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return VxBox(
+        child: Row(
+      children: [Image.network(catalog.imageUrl), "Hi".text.xl2.make()],
+    )).white.square(100).make().py16();
   }
 }
