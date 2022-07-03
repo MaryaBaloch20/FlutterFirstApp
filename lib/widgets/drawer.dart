@@ -8,7 +8,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     const accountImage = "assets/images/AyezaKhan.png";
     return Drawer(
-      backgroundColor: Colors.blue[900],
+      // backgroundColor: Colors.blue[900],
       child: ListView(
         //padding: const EdgeInsets.all(0.0),
         children: const [
@@ -16,8 +16,12 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.all(0.0),
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.all(0.0),
-                accountName: Text("Marya Baloch"),
-                accountEmail: Text("Maryabaloch7@gmail.com"),
+                accountName: Text(
+                  "Marya Baloch",
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                accountEmail: Text("Maryabaloch7@gmail.com",
+                    style: TextStyle(fontSize: 17.0)),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: AssetImage(accountImage),
                 ),
@@ -30,9 +34,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Home",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
           ListTile(
@@ -42,9 +47,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Profile",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
           ListTile(
@@ -54,9 +60,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Email",
-              textScaleFactor: 1.3,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              textScaleFactor: 1.4,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           )
         ],
