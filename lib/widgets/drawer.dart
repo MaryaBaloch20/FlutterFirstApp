@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+  // const MyDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const accountImage = "assets/images/AyezaKhan.png";
+    const accountImage = "assets/images/AK.png";
     return Drawer(
       // backgroundColor: Colors.blue[900],
       child: ListView(
